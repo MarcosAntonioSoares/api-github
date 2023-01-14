@@ -15,11 +15,12 @@ type RepositoriesComponentProps = {
 };
 
 export function RepositoriesComponent({ repositories, currentLanguage }: RepositoriesComponentProps) {
-  console.log(repositories);
   return (
     <Container>
       {repositories
-        .filter((repository) => currentLanguage === undefined || repository.language === currentLanguage)
+        .filter((repository) =>
+          currentLanguage === '' ? repository.language : repository.language === currentLanguage,
+        )
         .map((repository) => (
           <Repository key={repository.id} repository={repository} />
         ))}

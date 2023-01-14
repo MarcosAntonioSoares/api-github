@@ -6,7 +6,7 @@ export function Router() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/repositories" element={<Repositories />} />
+      <Route path="/:login/repositories" element={<Repositories />} />
     </Routes>
   );
 }

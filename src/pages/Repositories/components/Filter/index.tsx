@@ -8,7 +8,7 @@ interface Languages {
 
 type FilterProps = {
   languages: Languages[];
-  currentLanguage: string | undefined;
+  currentLanguage: string;
   handleClick: (name: string) => void;
 };
 
